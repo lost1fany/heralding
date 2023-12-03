@@ -2,9 +2,9 @@ FROM python:3.11-slim
 
 
 RUN apt-get update && apt-get install -y libpq-dev gcc
-RUN pip install --user --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN python setup.py install --user
+RUN python setup.py install
 
 ENV PATH=/root/.local/bin:$PATH
 
